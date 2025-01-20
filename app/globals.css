@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Updated Animated Background */
+.bg-animated-pattern {
+  background: linear-gradient(120deg, #310e51, #102284, #5100b3, #ff8400);
+  background-size: 400% 400%;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Updated Sidebar */
+.sidebar {
+  background: #0d1b6a; /* Very dark blue */
+  color: white;
+  border-right: 1px solid #b34700; /* Orange border */
+}
+
+.sidebar a {
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #b34700; /* Orange hover effect */
+  color: white;
+}
+
+/* Updated Button Styling */
+button {
+  background-color: #b34700;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8400; /* Lighter orange */
+}
+
+/* Input Styling */
+input {
+  border: 2px solid #0d1b6a; /* Very dark blue border */
+  padding: 8px;
+  border-radius: 8px;
+  color: black;
+}
+
+/* Updated Header */
+header {
+  color: white;
+}
